@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className='bg-emerald-50 text-emarald-800 border-b border-emerald-100 flex justify-between items-center p-3 gap-3 border-2 rounded shadow-lg shadow-gray-100'>
+        <nav className='bg-emerald-100 text-emarald-800 border-b border-emerald-100 flex justify-between items-center p-3 gap-3 border-2 rounded shadow-lg shadow-gray-100'>
 
             <h1 className='text-xl font-bold'>Shop Ease</h1>
 
