@@ -1,14 +1,19 @@
 import React from 'react'
-import { FakeProducts } from '../data/FakeProduct'
-import ProductCard from '../components/ProductCard'
+
+import { Link, Outlet } from 'react-router-dom'
 
 const Products = () => {
 
   return (
-    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-{    FakeProducts.map((product)=>{
-        return    <ProductCard key={product.id} {...product} />
-    })}
+    <div className="container">
+            <div className="categories">
+          <Link to='allproducts'>All Products</Link>
+          <Link to='men'>Men</Link>
+          <Link to='women'>Women</Link>
+          <Link to='kids'>kids</Link>
+      </div>
+      <Outlet/>
+   
     </div>
   )
 }
