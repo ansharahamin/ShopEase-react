@@ -11,6 +11,10 @@ import Man   from "./components/Man";
 import Women from './components/Women'
 import Kids from './components/Kids'
 import AllProducts from './components/AllProducts'
+import { FakeProducts } from './data/FakeProduct'
+const menCollection = FakeProducts.filter(p=>p.category==='men')
+const womenCollection = FakeProducts.filter(p=>p.category==='women')
+const kidsCollection = FakeProducts.filter(p=>p.category==='kids')
 function App() {
 
   return (
@@ -19,10 +23,10 @@ function App() {
     <Routes>
       <Route path='/'element={<Home/>} />
       <Route path='products'element={<Products/>} >
-        <Route path="allProducts" element={<AllProducts/>}/>
-        <Route path='men' element={<Man/>}/>
-        <Route path='women' element={<Women/>}/>
-        <Route path='kids' element={<Kids/>}/>
+        <Route index element={<AllProducts/>}/>
+        <Route path='men' element={<Man menCollection={menCollection}/>}/>
+        <Route path='women' element={<Women womenCollection={womenCollection}/>}/>
+        <Route path='kids' element={<Kids kidsCollection={kidsCollection}/>}/>
         </Route>
       <Route path='product-details/:id'element={<ProductDetails/>} />
       <Route path='cart'element={<Cart/>} />

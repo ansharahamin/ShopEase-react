@@ -7,7 +7,7 @@ const ProductCard = (props) => {
         <p className='text-emerald-700 text-sm border-b border-emerald-200 p-2 rounded'>{props.id}</p>
       <h3 className='font-bold text-lg'>{props.title}</h3>
       <p className='text-emerald-950'>{props.category}</p>
-      <p className='text-emerald-950'>{props.price}</p>
+      <p className='text-emerald-950 font-bold'>PKR: {props.price}</p>
       <div className="btns flex justify-between mt-3 border-t border-emerald-200 pt-2">
         <button className='bg-emerald-900 text-emerald-100 px-4 py-2 rounded-4xl hover:bg-emerald-700 transition-colors' type="button" >Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
         <button className='bg-emerald-600 text-emerald-100 px-4 py-2 rounded-4xl hover:bg-emerald-700 transition-colors' type='button' >Buy Now <i class="fa-solid fa-cart-shopping"></i></button>
